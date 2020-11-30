@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "XHTML1-s.dtd" >
+<html xmlns="http://www.w3.org/TR/1999/REC-html-in-xml" xml:lang="en" lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+<style>
+.bodyContainer {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.notebookFor {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(119, 119, 119);
+    margin: 24px 0px 0px;
+    padding: 0px;
+}
+
+.bookTitle {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: #333333;
+    margin-top: 22px;
+    padding: 0px;
+}
+
+.authors {
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(119, 119, 119);
+    margin-top: 22px;
+    margin-bottom: 24px; 
+    padding: 0px;
+}
+
+.sectionHeading {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+    color: #333333;
+    margin-top: 24px;
+    padding: 0px;
+}
+
+.noteHeading {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    color: #333333;
+    margin-top: 20px;
+    padding: 0px;
+}
+
+.noteText {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    color: #333333;
+    margin: 2px 0px 0px;
+    padding: 0px;
+}
+
+.highlight_blue {
+    color: rgb(178, 205, 251);
+}
+
+.highlight_orange {
+    color: #ffd7ae;
+}
+
+.highlight_pink {
+    color: rgb(255, 191, 206);
+}
+
+.highlight_yellow {
+    color: rgb(247, 206, 0);
+}
+
+.notebookGraphic {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.notebookGraphic img {
+    -o-box-shadow:      0px 0px 5px #888;
+    -icab-box-shadow:   0px 0px 5px #888;
+    -khtml-box-shadow:  0px 0px 5px #888;
+    -moz-box-shadow:    0px 0px 5px #888;
+    -webkit-box-shadow: 0px 0px 5px #888;
+    box-shadow:         0px 0px 5px #888; 
+    max-width: 100%;
+    height: auto;
+}
+
+hr {
+    border: 0px none;
+    height: 1px;
+    background: none repeat scroll 0% 0% rgb(221, 221, 221);
+}
+</style>
+</head>
+<body>
+<div class='bodyContainer'>
+<h1><div class='notebookFor'>Notes and highlights for</div><div class='bookTitle'>Numsense! Data Science for the Layman: No Math Added
+</div><div class='authors'>
+Ng, Annalyn
+</div></h1><hr/>
+
+<h2 class='sectionHeading'>2. k-Means Clustering</h2><h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 2.3 Defining Clusters &gt; Page 18 &middot; Location 301</div><div class='noteText'>As the number of clusters increases , members within each cluster become more similar to each other , but neighboring clusters also become less distinct from each other . Taking this to the extreme , each data point could become a cluster in itself , which provides us with no useful information at all .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 2.3 Defining Clusters &gt; Page 18 &middot; Location 303</div><div class='noteText'>The number of clusters should be large enough to enable us to extract meaningful patterns that can inform business decisions , but also small enough to ensure that clusters remain clearly distinct .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 2.3 Defining Clusters &gt; Page 18 &middot; Location 305</div><div class='noteText'>One way to determine the appropriate number of clusters is to use a scree plot ( see Figure 2 ) . A scree plot shows how within - cluster scatter decreases as the number of clusters increases . If all members belong to a single cluster , within - cluster scatter would be at its maximum . As we increase the number of clusters , clusters grow more compact and their members more homogenous .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 2.3 Defining Clusters &gt; Page 21 &middot; Location 324</div><div class='noteText'>Step 0 : Start by guessing where the central points of each cluster are . Let’s call these pseudo - centers , since we do not yet know if they are actually at the center of their clusters . Step 1 : Assign each data point to the nearest pseudo - center . By doing so , we have formed two clusters , red and blue . Step 2 : Update the location of the pseudo - centers to the center of their respective members . Step 3 : Repeat the steps of cluster member re - assignments ( Step 1 ) and cluster center re - positioning ( Step 2 ) , until there are no more changes to cluster membership .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 2.4 Limitations &gt; Page 21 &middot; Location 332</div><div class='noteText'>Although k - means clustering can be useful , it is not without limitation : Each data point can only be assigned to one cluster . Sometimes a data point might be in the middle of two clusters , with an equal probability of being assigned to either . Clusters are assumed to be spherical . The iterative process of finding data points closest to a cluster center is akin to narrowing the cluster’s radius , so that the resulting cluster resembles a compact sphere . This might pose a problem if the shape of an actual cluster is , for instance , an ellipse — such elongated clusters might be truncated , with their members subsumed into nearby clusters . Clusters are assumed to be discrete . k - means clustering does not permit clusters to overlap , nor to be nested within each other . Instead of coercing each data point into a single cluster , there are more robust clustering techniques that compute the probabilities of how likely each data point might belong to other clusters , thus helping to identify non - spherical or overlapping clusters .</h3>
+<h2 class='sectionHeading'>3. Principal Component Analysis</h2><h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 3.2 Principal Components &gt; Page 24 &middot; Location 354</div><div class='noteText'>Principal Component Analysis ( PCA ) is a technique that finds the underlying variables ( known as principal components ) that best differentiate your data points . These principal components are dimensions along which your data points are most spread out</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 3.2 Principal Components &gt; Page 26 &middot; Location 365</div><div class='noteText'>vitamin C − fat As vitamin C spreads the vegetable distribution upward , we minus fat to spread the meats downward . Combining the two variables thus helps to spread out both the vegetable and meat items ( center column in Figure 3 ) . The spread can be further improved by adding fiber , which vegetable items have in varying levels : ( vitamin C + fiber ) - fat This new variable gives us the best data spread yet</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 3.3 Example: Analyzing Food Groups &gt; Page 30 &middot; Location 401</div><div class='noteText'>The number of principal components to shortlist is determined by a scree plot , which we had last seen in the last chapter . Figure 7 .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 3.4 Limitations &gt; Page 31 &middot; Location 411</div><div class='noteText'>PCA is a useful technique for analyzing datasets with many variables . However , it has drawbacks : Maximizing Spread . PCA makes an important assumption that dimensions with the largest spread of data points are also the most useful . However , this may not be true . A popular counter example is the task of counting pancakes arranged in a stack . Figure 8 . Pancake - counting analogy . To count the number of pancakes , we differentiate one pancake from the next along the vertical axis ( i.e . height of stack ) . However , if the stack is short , PCA would erroneously identify the horizontal axis ( i.e . diameter of pancakes ) as the best principal component for our task since it would be the dimension along which there is largest spread . Interpreting Components . A key challenge with PCA is that interpretations of generated components have to be inferred , and sometimes , we may struggle to explain why variables would be combined in a certain way .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 3.4 Limitations &gt; Page 32 &middot; Location 421</div><div class='noteText'>Orthogonal Components . PCA always generates orthogonal principal components , which means that components are positioned at 90 degrees to each other . However , this assumption is restrictive as informative dimensions may not be orthogonal . To resolve this , we can use an alternative technique known as Independent Component Analysis ( ICA ) .</h3>
+<h2 class='sectionHeading'>4. Association Rules</h2><h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 4.2 Support, Confidence and Lift &gt; Page 36 &middot; Location 442</div><div class='noteText'>Support . This indicates how frequently an itemset appears , measured by the proportion of transactions in which the itemset is present .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 4.2 Support, Confidence and Lift &gt; Page 36 &middot; Location 445</div><div class='noteText'>A support threshold could be chosen to identify frequent itemsets , such that itemsets with support values above this threshold would be deemed as frequent .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 4.2 Support, Confidence and Lift &gt; Page 37 &middot; Location 449</div><div class='noteText'>Confidence . This indicates how frequently item Y would appear if item X is present , expressed as { X - &gt; Y } .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 4.2 Support, Confidence and Lift &gt; Page 37 &middot; Location 456</div><div class='noteText'>Lift . This indicates how frequently items X and Y appear together , while accounting for how frequently each would appear on its own .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 4.2 Support, Confidence and Lift &gt; Page 37 &middot; Location 457</div><div class='noteText'>Therefore , the lift of { apple - &gt; beer } is equal to the confidence of { apple - &gt; beer } divided by the frequency of { beer } .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 4.2 Support, Confidence and Lift &gt; Page 37 &middot; Location 460</div><div class='noteText'>A lift value greater than one means that item Y is likely to be bought if item X is bought , while a value less than one means that item Y is unlikely to be bought if item X is bought .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 4.4 Apriori Principle &gt; Page 40 &middot; Location 484</div><div class='noteText'>Simply put , the apriori principle states that if an itemset is infrequent , then any larger itemsets containing it must also be infrequent .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 4.4 Apriori Principle &gt; Page 40 &middot; Location 488</div><div class='noteText'>Step 0 : Start with itemsets containing just a single item , such as { apple } and { pear } . Step 1 : Determine the support for each itemset . Retain itemsets that meet the minimum support threshold , and toss out those that do not . Step 2 : Increase the size of candidate itemsets by one item , and generate all possible configurations using itemsets retained in the previous step . Step 3 : Repeat Steps 1 and 2 , determining the support for ever - larger itemsets , until there are no new itemsets to examine .</h3>
+<h2 class='sectionHeading'>5. Social Network Analysis</h2><h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 5.3 Louvain Method &gt; Page 48 &middot; Location 553</div><div class='noteText'>The Louvain method is one way to identify clusters in a network . It experiments with different clustering configurations to 1 ) maximize the number and strength of edges between nodes in the same cluster , while 2 ) minimizing those between nodes in different clusters . The degree to which these two conditions are fulfilled is known as modularity , and higher modularity indicates more optimal clusters .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 5.3 Louvain Method &gt; Page 48 &middot; Location 556</div><div class='noteText'>To obtain the optimal clustering configuration , the Louvain method iterates through the following steps : Step 0 : Treat each node as a single cluster , such that we start off with as many clusters as there are nodes . Step 1 : Reassign a node into a cluster that results in the highest improvement in modularity . If it is not possible to improve modularity any further , the node stays put . Repeat for every node until there are no more reassignments . Step 2 : Build a coarse - grained version of the network by representing each cluster found in Step 1 as a single node , and consolidating former inter - cluster edges into weighted edges that connect the new nodes . Step 3 : Repeat Steps 1 and 2 until further reassignment and consolidation are not possible .</h3>
+<h2 class='sectionHeading'>6. Regression Analysis</h2><h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 6.3 Gradient Descent &gt; Page 60 &middot; Location 665</div><div class='noteText'>To reduce the risk of getting stuck in a pit , we could instead use stochastic gradient descent , where rather than using every data point to adjust parameters in each iteration , we reference only one . This introduces variability , which could allow the algorithm to escape from a pit .</h3>
+<h2 class='sectionHeading'>7. k-Nearest Neighbors and Anomaly Detection</h2><h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 7.2 Birds of a Feather Flock Together &gt; Page 66 &middot; Location 720</div><div class='noteText'>k - Nearest Neighbors ( k - NN ) is an algorithm that classifies a data point based on the classification of its neighbors .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 7.2 Birds of a Feather Flock Together &gt; Page 66 &middot; Location 725</div><div class='noteText'>The k in k - NN is a parameter referring to the number of nearest neighbors to include in the majority voting process .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 7.2 Birds of a Feather Flock Together &gt; Page 67 &middot; Location 735</div><div class='noteText'>Apart from classifying data points into groups , k - NN can also be used to predict continuous values by aggregating the values of nearest neighbors .</h3>
+<h2 class='sectionHeading'>8. Support Vector Machine</h2><h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 8.3 Delineating an Optimal Boundary &gt; Page 73 &middot; Location 799</div><div class='noteText'>The main objective of SVM is to derive an optimal boundary that separates one group from another .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 8.3 Delineating an Optimal Boundary &gt; Page 73 &middot; Location 801</div><div class='noteText'>To find the optimal boundary , we need to first identify peripheral data points that are located closest to points from the other group . The optimal boundary is then drawn down the middle between peripheral data points of both groups ( see Figure 3 ) . As these peripheral data points support the discovery of the optimal boundary , they are also known as support vectors .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 8.3 Delineating an Optimal Boundary &gt; Page 74 &middot; Location 811</div><div class='noteText'>To overcome these problems , the SVM algorithm has one key feature , a buffer zone , that allows a limited number of training data points to cross over to the incorrect side . This results in a ‘ softer ’ boundary that is more robust against outliers ,</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 8.3 Delineating an Optimal Boundary &gt; Page 75 &middot; Location 824</div><div class='noteText'>SVM’s ability to manipulate data in higher dimensions contributes to its popularity in the analysis of datasets with many variables .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 8.4 Limitations &gt; Page 76 &middot; Location 828</div><div class='noteText'>Multiple Groups . SVM is only able to classify two groups at a time . If there are more than two groups , SVM would need to be iterated to distinguish each group from the rest through a technique known as multi - class SVM .</h3>
+<h2 class='sectionHeading'>9. Decision Tree</h2><h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 9.3 Generating a Decision Tree &gt; Page 80 &middot; Location 859</div><div class='noteText'>A decision tree is grown by first splitting all data points into two groups , such that similar data points are grouped together ,</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 9.4 Limitations &gt; Page 82 &middot; Location 879</div><div class='noteText'>The first method chooses different combinations of binary questions at random to grow multiple trees , and then aggregates the predictions from those trees . This technique is known as building a random forest</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 9.4 Limitations &gt; Page 82 &middot; Location 881</div><div class='noteText'>Instead of choosing binary questions at random , the second method strategically selects binary questions , such that prediction accuracy for each subsequent tree improves incrementally . A weighted average of predictions from all trees is then taken to obtain the result . This technique is known as gradient boosting .</h3>
+<h2 class='sectionHeading'>10. Random Forests</h2><h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 10.1 Wisdom of the Crowd &gt; Page 83 &middot; Location 894</div><div class='noteText'>This method of combining models to improve prediction accuracy is known as ensembling .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 10.1 Wisdom of the Crowd &gt; Page 83 &middot; Location 895</div><div class='noteText'>We observe this effect in a random forest , which is an ensemble of decision trees</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 10.4 Bootstrap Aggregating (Bagging) &gt; Page 88 &middot; Location 944</div><div class='noteText'>Bootstrap aggregating ( also termed as bagging ) is used to create thousands of decision trees that are adequately different from each other . To ensure minimal correlation between trees , each tree is generated from a random subset of the training data , using a random subset of predictor variables .</h3>
+<h2 class='sectionHeading'>11. Neural Networks</h2><h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - 11.5 Limitations &gt; Page 100 &middot; Location 1063</div><div class='noteText'>In the classic gradient descent algorithm ( see Chapter 6.3 ) , we cycle through all training examples to update a single parameter in an iteration . As this is time - consuming with large datasets , an alternative would be to use just one training example in each iteration to update the parameter . This technique is known as stochastic gradient descent ,</h3>
+<h2 class='sectionHeading'>Glossary</h2><h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 119 &middot; Location 1210</div><div class='noteText'>Activation Rule . A criterion that specifies the source and strength of input signals that a neuron has to receive before it is activated . Neuron activations are propagated through a neural network to generate predictions .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 119 &middot; Location 1212</div><div class='noteText'>Apriori Principle . A rule which states that if an itemset is infrequent , then any larger itemset containing it must also be infrequent . It is a technique used to reduce the number of configurations we need to examine in measuring frequency and associations of items .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 119 &middot; Location 1214</div><div class='noteText'>Association Rules . An unsupervised learning technique that discovers how data points are associated with each other , such as identifying items that are frequently bought together . There are three common measures of association : Support of { X } indicates how frequently item X appears Confidence of { X - &gt; Y } indicates how frequently item Y appears when item X is present Lift of { X - &gt; Y } indicates how frequently items X and Y appear together , while accounting for how frequently each would appear on its own</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 120 &middot; Location 1218</div><div class='noteText'>Backpropagation . A process of sending feedback in a neural network on whether a prediction was accurate . If a prediction was wrong , the error would be sent across the neural pathway in a backward pass so that neurons along that path would re - calibrate their activation criteria in order to reduce the error .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 120 &middot; Location 1220</div><div class='noteText'>Best - Fit Line . A trend line that passes through or sits close to as many data points as possible . Black Box . A term used to describe a prediction model that is uninterpretable , in that it does not have a clear formula for deriving its predictions . Bootstrap Aggregating ( Bagging ) . A technique to create thousands of uncorrelated decision trees , from which predictions are averaged to prevent overfitting . Each tree is generated from a random subset of the training data , using a random subset of predictor variables for selection at each tree branch . Classification . A class of supervised learning techniques where we predict binary or categorical values . Confusion Matrix . A metric to evaluate the accuracy of classification predictions . Apart from overall classification accuracy , the matrix shows rates of false positives and false negatives . Correlation . A metric to measure the linear association between two variables . Correlation coefficients range from - 1 to 1 , and provide two pieces of information : 1 ) strength of association , which is maximized at - 1 or 1 and minimized at 0 , as well as 2 ) direction of association , which is positive when the two variables move together in the same direction , and negative otherwise .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 120 &middot; Location 1231</div><div class='noteText'>Cross - Validation . A technique to maximize the availability of data for validation by dividing the dataset into several segments that are used to test the model repeatedly . In a single iteration , all but one of the segments are used to train a prediction model , which is then tested on the last segment . This process is repeated until each segment has been used as the test segment exactly once . The final estimate of the model’s prediction accuracy is taken as the average of that across all iterations .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 121 &middot; Location 1234</div><div class='noteText'>Decision Tree . A supervised learning technique that makes predictions by asking a sequence of binary questions to repeatedly partition data points to obtain homogeneous groups . While easy to understand and visualize , decision trees are prone to overfitting . Dimension Reduction . A process of decreasing the number of variables in the data , such as by combining highly correlated ones .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 121 &middot; Location 1238</div><div class='noteText'>Dropout . A technique to prevent overfitting a neural network model , where we randomly exclude a different subset of neurons during each training cycle , forcing different combinations of neurons to work together to uncover more features . Ensembling . A technique to combine multiple prediction models to improve accuracy . It works well because models that yield accurate predictions tend to reinforce each other , while wrong predictions cancel each other out .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 121 &middot; Location 1241</div><div class='noteText'>Epsilon - Decreasing Strategy . A reinforcement learning technique for allocating resources that intersperses two phases : 1 ) exploring for better alternatives , and 2 ) exploiting known returns . Epsilon is the proportion of time spent exploring alternatives , and is decreased as more information is gained on which is the best alternative .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 121 &middot; Location 1244</div><div class='noteText'>Feature Engineering . A process of generating new variables creatively , such as by recoding a single variable , or by combining multiple ones . Gradient Boosting . A supervised learning technique that generates multiple decision trees by selecting different combinations of binary questions to grow each tree branch . Binary questions are selected strategically ( instead of randomly , as in random forests ) , such that prediction accuracy for each subsequent tree improves . Predictions from individual trees are then combined , with latter trees given a heavier weight , to generate final predictions . Gradient Descent . A technique to tune model parameters . It makes an initial estimate on a set of parameter values , before starting an iterative process of applying these estimates to every data point to get predictions , and then revising the estimates to reduce overall prediction error .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 122 &middot; Location 1251</div><div class='noteText'>- Means Clustering . An unsupervised learning technique that groups similar data points together , where k is the number of groups to be identified .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 122 &middot; Location 1252</div><div class='noteText'>k - Nearest Neighbors . A supervised learning technique that classifies a data point by referring to classifications of other data points it is closest to , where k is the number of data points to reference .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 122 &middot; Location 1254</div><div class='noteText'>Kernel Trick . A technique to project data points onto a higher dimension , where data points can be separated by a straight boundary . These straight boundaries are simpler to compute , and are also easily translated into curved ones when projected back down onto a lower dimension . Louvain Method . An unsupervised learning technique that identifies clusters in a network , in a way that maximizes interactions within clusters and minimizes those between clusters .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 122 &middot; Location 1257</div><div class='noteText'>Multi - Arm Bandit Problem . A term used to refer to any problem on resource allocation , such as deciding which slot machine to place bets on . The term was inspired by the moniker for slot machines — one - arm bandits — as they appear to cheat players of money with each arm pull .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 122 &middot; Location 1260</div><div class='noteText'>Multicollinearity . A problem in regression analysis where inclusion of highly correlated predictors result in distorted interpretations of regression weights . Neural Network . A supervised learning technique that uses layers of neurons to transmit activations for learning and making predictions . While highly accurate , results are largely uninterpretable due to its complexity . Overfitting . A phenomenon where a prediction model is overly sensitive and mistakes random variations in data as persistent patterns . An overfitted model would yield highly accurate predictions for current data , but would be less generalizable to future data . PageRank . An algorithm that identifies dominant nodes in a network . It ranks nodes based on their number of links , as well as the strength and source of those links .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 123 &middot; Location 1266</div><div class='noteText'>Parameter Tuning . A process of adjusting an algorithm’s settings to improve the accuracy of the resulting model , much like tuning a radio for the right frequency channel . Principal Component Analysis . An unsupervised learning technique that reduces the number of variables we have to analyze by combining the most informative variables in our data into new variables called principal components . Random Forest . A supervised learning technique that generates multiple decision trees by selecting different combinations of binary questions at random to grow each tree branch . Predictions from individual trees are then aggregated to generate final predictions .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 123 &middot; Location 1273</div><div class='noteText'>Regression Analysis . A supervised learning technique that finds the best - fit trend line that passes through or sits close to as many data points as possible . The trend line is derived from a weighted combination of predictors .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 123 &middot; Location 1275</div><div class='noteText'>Regularization . A technique to prevent overfitting a prediction model by introducing a penalty parameter that artificially inflates prediction error with any increase in the model’s complexity . This enables us to account for both complexity and accuracy in optimizing model parameters . Reinforcement Learning . A class of machine learning algorithms that is used when we want to make predictions based on patterns in our data , and to continuously improve</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 124 &middot; Location 1278</div><div class='noteText'>those predictions as more results come in .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 124 &middot; Location 1279</div><div class='noteText'>Root Mean Squared Error . A metric to evaluate the accuracy of regression predictions . It is particularly useful in cases where we want to avoid large errors . As each individual error is squared , large errors are amplified , rendering the metric extremely sensitive to outliers . Scree Plot . A graph used to determine how many groups we wish to keep . Groups can range from data clusters to reduced dimensions . The optimal number of groups is usually determined by the location of a kink , which is a sharp bend in the scree plot . Beyond this point , allowing more groups might yield less generalizable results . Standardization . A process that shifts variables onto a uniform standard scale , analogous to expressing each variable in terms of its percentiles . Subsampling . A technique to prevent overfitting a neural network model , where we ‘ smoothen ’ out the input training data by taking averages . If we are performing this on images for instance , we could reduce image size or lower color contrast .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 124 &middot; Location 1288</div><div class='noteText'>Support Vector Machine . A supervised learning technique that classifies data points into two groups by drawing a boundary down the middle between the peripheral data points , also called support vectors , of both groups . It employs the kernel trick to efficiently derive curved boundaries .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 126 &middot; Location 1294</div><div class='noteText'>Translational Invariance . A property of convolutional neural networks , where image features are recognized regardless of where they are positioned on the image .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 126 &middot; Location 1295</div><div class='noteText'>Underfitting . A phenomenon where a prediction model is too insensitive , and overlooks underlying patterns . An underfitted model is likely to neglect significant trends , which would cause it to give less accurate predictions for both current and future data .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 126 &middot; Location 1297</div><div class='noteText'>Unsupervised Learning . A class of machine learning algorithms that is used to find hidden patterns in our data . These algorithms are unsupervised because we do not know what patterns to look out for and thus leave them to be uncovered by the algorithms .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 126 &middot; Location 1299</div><div class='noteText'>Validation . An assessment of how accurate our model is in predicting new data . It involves splitting the current dataset into two parts : the first part serves as a training dataset to generate and tune our prediction model , while the second part acts as a proxy for new data and is used as a test dataset to assess our model’s accuracy .</h3>
+<h3 class='noteHeading'>Highlight (<span class='highlight_yellow'>yellow</span>) - Page 126 &middot; Location 1303</div><div class='noteText'>There are different types of variables : Binary . The simplest type of variable , with only two possible options ( e.g . male vs . female ) . Categorical . A variable that is used to represent more than two options ( e.g . ethnicity ) . Integer . A variable that is used to represent whole numbers ( e.g . age ) . Continuous . The most detailed type of variable , representing numbers with decimal places ( e.g . price ) .</h3>
+</div> 
+</body> 
+</html> 
