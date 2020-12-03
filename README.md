@@ -38,3 +38,6 @@ path to the virtual env (project/env) is set up correctly. The file paths curren
 - Set up the trigger to choose how frequently you want the emails.
 - Go to Actions tab, and under Programs/Script, browse to `scheduler_action.bat` file. 
 - Click Ok and exit the modal. Your task should be created! To test, you can find the task in Task Scheduler and right click to choose Run. You should be getting an email. 
+
+#### Non-Windows OS
+You can use CRON jobs instead of Task Scheduler to schedule automated run.
