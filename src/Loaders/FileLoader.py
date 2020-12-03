@@ -1,5 +1,5 @@
 import random
-from os import walk
+from os import walk, getcwd
 
 from CustomExceptions import NoFilesInNotesDir
 from Constants import NOTES_DIR
@@ -11,14 +11,16 @@ class FileLoader:
         Returns a randomly chosen file name from ./notes dir.
         If no file found, raises an exception.
         """
-        (_, _, filenames) = next(walk(dirPath))
+
+        path = f'{getcwd()}\{dirPath}'
+        (_, _, filenames) = next(walk(path))
         
         if len(filenames) < 1:
             raise NoFilesInNotesDir
 
         randomlyChosenFile = random.choice(filenames)
-        filePath = f"{NOTES_DIR}{randomlyChosenFile}"
-
+        filePath = f"{getcwd()}/{NOTES_DIR}{randomlyChosenFile}"
+        
         return filePath
 
 

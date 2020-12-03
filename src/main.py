@@ -1,4 +1,5 @@
 from dotenv import load_dotenv
+import time
 
 from Loaders.FileLoader import FileLoader
 from Extractors.ExtractorFactory import ExtractorFactory
@@ -35,6 +36,10 @@ def main():
     
     emailSender = EmailSender(EMAILTYPES['html'])
     emailSender.sendEmail(emailBody)
+    
+    # CMD Display
+    print("Email Sent")
+    time.sleep(2)
 
 if __name__ == "__main__":
     main()
