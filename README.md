@@ -18,9 +18,8 @@ The `data/notes` directory contains all your notes. It first randomly picks a fi
 #### Initial setup
 - Clone the project to your workspace/disk.
 
-- `cd` to `path_to_cloned_project/refurb-notes/env/Scripts`. Run `source activate` if using `Bash` or just `activate` if using CMD (need to run in Administrative mode).
+- Add your Kindle notes in the `data/notes` directory (there is a note html file from the book `Numsense! Data Science for the Layman No Math Added-Notebook` for reference). You should get the HTML version of the notes. Instructions on how to send yourself an email directly from Kindle can be found [here](https://the-digital-reader.com/2020/06/28/how-to-download-your-kindle-notes-and-highlights-and-export-them/).
 
-- `cd` to `root` dir of the project and run `python -m pip install -r requirements.txt` to install all the dependencies. 
 #### Setting up .env file
 - Create a `.env` file in `src` dir. Paste the following with the appropriate values: <br/>
 FROM=YOUR_NEWLY_CREATED_GMAIL <br/>
