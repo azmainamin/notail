@@ -4,6 +4,7 @@ Refurb Notes periodically sends you an email with randomly picked notes/highligh
 
 Currently, Refurb Notes only supports highlights from Kindle. 
 
+![Sample Email](sample_email.PNG)
 ## How it works
 The `data/notes` directory contains all your notes. It first randomly picks a file and then chooses `n` number of random highlights from the note file. Then it sends an email to you, configured in the `.env` file, with the randomly chosen highlights
 
