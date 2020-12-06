@@ -13,8 +13,13 @@ class FileLoader:
         """
 
         path = f'{getcwd()}\{dirPath}'
+        print(path)
+        for root, dirs, files in walk(path, topdown=True):
+            print("WALK")
+            print(root)
+
         (_, _, filenames) = next(walk(path))
-        
+
         if len(filenames) < 1:
             raise NoFilesInNotesDir
 
