@@ -3,6 +3,7 @@ from os import walk, getcwd
 
 from CustomExceptions import NoFilesInNotesDir
 from Constants import NOTES_DIR
+from .LoaderHelpers import getProjectRootDir
 
 class FileLoader:
     @staticmethod
@@ -12,14 +13,17 @@ class FileLoader:
         If no file found, raises an exception.
         """
 
-        path = f'{getcwd()}\{dirPath}'
+        rootDir = getProjectRootDir()
+
+        path = f'{rootDir}\{dirPath}'
+        
         (_, _, filenames) = next(walk(path))
         
         if len(filenames) < 1:
             raise NoFilesInNotesDir
 
         randomlyChosenFile = random.choice(filenames)
-        filePath = f"{getcwd()}/{NOTES_DIR}{randomlyChosenFile}"
+        filePath = f"{rootDir}/{NOTES_DIR}{randomlyChosenFile}"
         
         return filePath
 
