@@ -32,7 +32,7 @@ def main():
     emailBody = emailGenerator.createEmailBody(template, randomlyChosenNotes)
     
     emailSender = EmailSender(FILETYPES['html'])
-    #emailSender.sendEmail(emailBody)
+    emailSender.sendEmail(emailBody)
     
     # CMD Display
     print("Email Sent")
