@@ -3,8 +3,9 @@ from .NoteExtractor import NoteExtractorInterface
 from bs4 import BeautifulSoup
 
 class HtmlNoteExtractor(NoteExtractorInterface):
-    def __init__(self, noteBody):
-        self.noteBody = noteBody
+    def __init__(self, filePath):
+        with open(filePath, "r") as noteFile:
+            self.noteBody = noteFile.read()
 
     def getRandomlyChosenNotes(self, numToReturn=3):
         """
@@ -12,15 +13,16 @@ class HtmlNoteExtractor(NoteExtractorInterface):
         notes/highlights from the collection of notes (self.noteBody)
         """
         allNoteText = self._getAllNoteTexts()
-        randomlyChosenNotes = []
-
-        for _ in range(numToReturn):
-            note = random.choice(allNoteText)
-            randomlyChosenNotes.append(note)
-            allNoteText.remove(note)
         
-        return randomlyChosenNotes
-
+        if len(allNoteText) < numToReturn:
+            return allNoteText
+        else:
+            randomlyChosenNotes = []
+            for _ in range(numToReturn):
+                note = random.choice(allNoteText)
+                randomlyChosenNotes.append(note)
+                allNoteText.remove(note)
+            return randomlyChosenNotes
         
     def _getAllNoteTexts(self):
         soup = BeautifulSoup(self.noteBody, "html.parser")

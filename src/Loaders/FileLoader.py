@@ -23,7 +23,7 @@ class FileLoader:
             raise NoFilesInNotesDir
 
         randomlyChosenFile = random.choice(filenames)
-        filePath = f"{rootDir}/{NOTES_DIR}{randomlyChosenFile}"
+        filePath = f"{rootDir}\{NOTES_DIR}{randomlyChosenFile}"
         
         return filePath
 
