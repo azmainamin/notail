@@ -4,7 +4,7 @@ from email.mime.multipart import MIMEMultipart
 import os
 
 from .IEmailSender import IEmailSender
-from Constants import EMAILTYPES
+from Constants import FILETYPES
 
 class EmailSender(IEmailSender):
     def __init__(self, emailType):
@@ -18,7 +18,7 @@ class EmailSender(IEmailSender):
         Send a html email with the emailBody
         """
         message = self._createMessageObject()
-        messageBody = MIMEText(emailBody, EMAILTYPES['html'])
+        messageBody = MIMEText(emailBody, FILETYPES['html'])
         message.attach(messageBody)
 
         self._send(message)

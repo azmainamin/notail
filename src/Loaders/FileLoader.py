@@ -18,12 +18,12 @@ class FileLoader:
         path = f'{rootDir}\{dirPath}'
         
         (_, _, filenames) = next(walk(path))
-        
+
         if len(filenames) < 1:
             raise NoFilesInNotesDir
 
         randomlyChosenFile = random.choice(filenames)
-        filePath = f"{rootDir}/{NOTES_DIR}{randomlyChosenFile}"
+        filePath = f"{rootDir}\{NOTES_DIR}{randomlyChosenFile}"
         
         return filePath
 
