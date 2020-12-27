@@ -3,8 +3,8 @@
 Refurb Notes periodically sends you an email with randomly picked notes/highlights that you have taken while reading, so that you can review them. This enforces [spaced-repetition](https://en.wikipedia.org/wiki/Spaced_repetition) and helps you retain information better. 
 
 Supported files:
-    - Kindle highlights exported as a html file
-    - PDF
+ * Kindle highlights exported as a html file
+ * PDF (annotations)
 
 ![Sample Email](sample_email.PNG)
 ## How it works
