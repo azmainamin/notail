@@ -1,5 +1,6 @@
 import copy
-from bs4 import BeautifulSoup
+import html
+from bs4 import BeautifulSoup, Tag, NavigableString
 
 class EmailGenerator:
     def createEmailBody(self, template, randomlyChosenNotes):
@@ -22,7 +23,11 @@ class EmailGenerator:
         textContainer = template.find(id='text-container')
         textBody = template.findAll('div', {"class" : "body-text"})
         copy_tag = copy.copy(textBody[0])
-        copy_tag.string = note
+
+        if isinstance(note, Tag):
+            copy_tag.insert(1, note)
+        else:
+            copy_tag.string = html.unescape(note)
         # TODO: extract to named functions
         copy_tag.append(BeautifulSoup().new_tag('br'))
         copy_tag.append(BeautifulSoup().new_tag('br'))

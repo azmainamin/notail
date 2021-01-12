@@ -6,5 +6,6 @@ DEFAULT_NUM_OF_NOTES = 3
 #EmailTypes
 FILETYPES = {
     'html': 'html',
-    'pdf' : 'pdf'
+    'pdf' : 'pdf',
+    'markdown': 'md'
 }

@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 class HtmlNoteExtractor(NoteExtractorInterface):
     def __init__(self, filePath):
-        with open(filePath, "r") as noteFile:
+        with open(filePath, "r", encoding='utf8') as noteFile:
             self.noteBody = noteFile.read()
 
     def getRandomlyChosenNotes(self, numToReturn=3):

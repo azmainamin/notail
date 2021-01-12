@@ -23,6 +23,7 @@ class PdfNotesExtractor(NoteExtractorInterface):
                 note = random.choice(allNotes)
                 result.append(note)
                 allNotes.remove(note)
+        return result
    
     def _getAllHighlights(self):
         highlights = []
