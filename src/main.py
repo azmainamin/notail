@@ -35,11 +35,11 @@ def main():
     emailBody = emailGenerator.createEmailBody(template, randomlyChosenNotes)
     
     emailSender = EmailSender(FILETYPES['html'])
-    #emailSender.sendEmail(emailBody)
+    emailSender.sendEmail(emailBody)
     
     # CMD Display
     print("Email Sent")
-    #time.sleep(2)
+    time.sleep(2)
     
 if __name__ == "__main__":
     main()

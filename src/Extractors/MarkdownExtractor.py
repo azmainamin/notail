@@ -33,14 +33,17 @@ class MarkdownNoteExtractor(NoteExtractorInterface):
             next_node = header
             while True:
                 next_node = next_node.nextSibling
+
                 if next_node is None:
                     break
                 if isinstance(next_node, Tag):
                     name = next_node.name 
                     if name == 'h2':
                         break
-                    if "namespace" in next_node.contents:
-                        print("code!")
+                    if "```" in next_node.contents[0]:
+                        code_tag = BeautifulSoup().new_tag('code')
+                        code_tag.append(next_node.contents[0])
+                        results.append(code_tag)
                     if name == 'p' or name == 'ul':
                         results.append(next_node)
             reduced = self._appendTags(results)
@@ -52,6 +55,6 @@ class MarkdownNoteExtractor(NoteExtractorInterface):
         if len(results) > 1:
             first = BeautifulSoup().new_tag('div')
             for tag in results:
-                first.append( tag)
+                first.append(tag)
                 BeautifulSoup().new_tag('br')
         return first     
